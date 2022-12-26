@@ -1,0 +1,12 @@
+.card-container {
+    @apply h-[100%] bg-[#cfc9c9] flex justify-center
+}
+
+.card {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    padding: 20px 8px;
+    border-radius: 1ch;
+    margin-top: 20px;
+}

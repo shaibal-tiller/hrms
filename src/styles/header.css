@@ -1,0 +1,29 @@
+.logo {
+    width: 68px;
+    padding: 6px;
+    background-color: azure;
+    border-radius: 38px;
+    @apply border-[#85CE1C] border-[2px]
+}
+
+.header-container {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    @apply items-center  bg-[#cfc9c9]
+}
+
+.logo-container {
+    padding-left: 12px;
+    width: 70%;
+}
+
+.header-title {
+    width: 100%;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+
+
+}

@@ -1,0 +1,9 @@
+.module-container {
+  @apply
+  flex justify-center  gap-2 mt-2
+}
+.module-card{
+    @apply
+    py-4 rounded-lg  bg-white text-[#000] text-3xl px-2
+    hover:cursor-pointer
+}
