@@ -2,7 +2,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { DesktopDatePicker,DesktopDateTimePicker } from '@mui/x-date-pickers';
 import { MobileDateTimePicker } from '@mui/x-date-pickers';
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
@@ -13,9 +13,8 @@ import { Box } from '@mui/material';
 const DatePicker = ({ label, name, setter }) => {
     const getFormattedDate = (dateValue) => {
         const parsedDate = new Date(dateValue)
-        return parsedDate.getDate() + "-" + (parsedDate.getMonth() + 1) + "-" + parsedDate.getFullYear()
+        return  (parsedDate.getMonth() + 1) + "-" +parsedDate.getDate() + "-" + parsedDate.getFullYear()
     }
-
 
     const [value, setValue] = useState()
     const handleChange = (newValue) => {
@@ -25,11 +24,12 @@ const DatePicker = ({ label, name, setter }) => {
 
 
     return (
-        <LocalizationProvider dateAdapter={AdapterDayjs} >
+        <LocalizationProvider  dateAdapter={AdapterDayjs} >
             <Box size='small'
                 noValidate
-                autoComplete="off">
-                <FormControl sx={{ m: 1 }} >
+                autoComplete="off"
+                sx={{m: 1}}>
+                <FormControl sx={{ m: 1,minWidth:'35ch' }} >
                     <DesktopDatePicker
                         label={label}
                         name={name || label || "date"}

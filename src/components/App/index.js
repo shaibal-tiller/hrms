@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import Router from '../Router';
-import AppContext from './Context';
+import {AppContext} from './Context';
 import { useState } from 'react';
 import '../../styles/App.css'
 import Header from '../../shared/Header';
@@ -12,8 +12,10 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   const [dt, setDt] = useState()
+ const  [userData,setUserData] = useState()
   const data = {
-    dt, setDt
+    dt, setDt,
+    userData,setUserData,
   }
   return (
     <AppContext.Provider value={data}>

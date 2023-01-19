@@ -12,5 +12,8 @@ export const routes = [
     createRoute('/', <Home />),
     createRoute('/register', <Register />),
     createRoute('/login', <Login />),
-    createRoute('/leave',<Module title={'Leave Portal'} />)
+    createRoute('/leave', <Module title={'Leave Portal'} />),
+    createRoute('/attn', <Module title={'Attendance'} />),
+    createRoute('/profile', <Module title="Profile" />),
+    createRoute('/requests', <Module title="Requests" />)
 ]

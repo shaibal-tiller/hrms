@@ -10,7 +10,9 @@
     height: 5rem;
     display: flex;
     justify-content: center;
-    @apply items-center  bg-[#cfc9c9]
+    background-color: var(--dark-primary-bg);
+ 
+    @apply items-center  bg-[#080808] text-[#fff]
 }
 
 .logo-container {
@@ -20,7 +22,7 @@
 
 .header-title {
     width: 100%;
-    color: #000;
+    color: var(--dark-primary-text);
     font-weight: 500;
     font-size: 1.875rem;
     line-height: 2.25rem;

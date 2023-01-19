@@ -7,8 +7,8 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
-const TextFieldInput = ({ type = "text", label = "", name = "", disabled = false, d_value=false,
- required = false, Icon = AccountCircle, multiline = false, width = "5", setter }) => {
+const TextFieldInput = ({ placeholder = '', type = "text", label = "", name = "", disabled = false, d_value = false,
+  required = false, Icon = AccountCircle, multiline = false, width = "5", setter }) => {
 
 
   const [text, setText] = React.useState("")
@@ -28,31 +28,42 @@ const TextFieldInput = ({ type = "text", label = "", name = "", disabled = false
 
   }
   return (
-
-
-    <TextField
-      sx={{ width: width ? '45%' : "5", m: 1 }}
-      onChange={handleChange}
-      error={text.length > 0}
-      helperText={text}
-      name={name}
-      disabled={disabled}
-      size={'small'}
-      variant="outlined"
-      label={label}
-      multiline={multiline}
-      type={type}
-      defaultValue={d_value?d_value:""}
-      required={required}
-      InputProps={{
-        startAdornment: (
-          <InputAdornment position="start">
-            <Icon />
-          </InputAdornment>
-        ),
+    <Box
+      sx={{
+        '& > :not(style)': { m: 1, },
       }}
+      noValidate
+      autoComplete="off">
+      <FormControl size='small' sx={{ minWidth: '37ch',m:1 }}>
 
-    />
+        <TextField
+          sx={{ minWidth: "20ch", m: 1, }}
+          onChange={handleChange}
+          placeholder={placeholder}
+          error={text.length > 0}
+          helperText={text}
+          name={name}
+          disabled={disabled}
+          size={'small'}
+          variant="outlined"
+          label={label}
+          multiline={multiline}
+          type={type}
+          defaultValue={d_value ? d_value : ""}
+          required={required}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Icon />
+
+              </InputAdornment>
+            ),
+          }}
+
+        >
+
+        </TextField>
+      </FormControl></Box>
 
   );
 }

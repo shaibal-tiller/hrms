@@ -3,7 +3,9 @@
   flex justify-center  gap-2 mt-2
 }
 .module-card{
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
     @apply
-    py-4 rounded-lg  bg-white text-[#000] text-3xl px-2
+    py-4 rounded-lg  text-3xl px-2
     hover:cursor-pointer
 }
